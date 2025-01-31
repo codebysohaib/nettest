@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Eternal Sunshine Fatima 🌸</title>
+    <style>
+        :root {
+            --pink: #ff9ff3;
+            --red: #ff6b6b;
+            --yellow: #f9ca24;
+            --blue: #54a0ff;
+            --purple: #a55eea;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, var(--pink), var(--red));
+            font-family: 'Comic Sans MS', cursive;
+            color: white;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ff6b6b" d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>'), auto;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 2rem 0;
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, var(--yellow), var(--red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .heart-container {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .heart {
+            font-size: 4rem;
+            animation: heartbeat 1.2s infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .heart:hover {
+            animation: none;
+            transform: scale(1.5);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .love-card {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .love-card:hover {
+            transform: rotateY(10deg) rotateX(10deg) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .love-card h2 {
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .love-card p {
+            color: var(--purple);
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+
+        .interactive-box {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            animation: glow 2s infinite alternate;
+            position: relative;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 10px var(--yellow); }
+            to { box-shadow: 0 0 30px var(--red); }
+        }
+
+        .love-meter {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--red), var(--purple));
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin: 1rem;
+            color: white;
+        }
+
+        .memory-game {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .memory-card {
+            width: 100px;
+            height: 100px;
+            background: var(--blue);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .memory-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            font-size: 1.2rem;
+            background: rgba(0,0,0,0.1);
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fatima My Eternal Sunshine 🌞</h1>
+        
+        <div class="heart-container">
+            <div class="heart" onclick="createHearts()">💖</div>
+        </div>
+
+        <div class="cards-container">
+            <div class="love-card">
+                <h2>Our First Meet 🌸</h2>
+                <p>That day when our eyes first met, my heart knew it found its home. Every moment since has been a beautiful adventure.</p>
+            </div>
+
+            <div class="love-card">
+                <h2>Your Smile ☀️</h2>
+                <p>Your smile is my favorite sunrise, lighting up even the darkest days and filling my world with warmth.</p>
+            </div>
+
+            <div class="love-card">
+                <h2>Forever Promise 💍</h2>
+                <p>No matter where life takes us, I promise to walk beside you, hand in hand, through every season of life.</p>
+            </div>
+        </div>
+
+        <button class="love-meter" onclick="measureLove()">
+            Measure Our Cosmic Love 💘
+        </button>
+
+        <div class="interactive-box">
+            <p style="color: var(--purple); font-size: 1.3rem;">
+                Click anywhere to create hearts!<br>
+                Our Special Memories:
+                <span id="memoryCounter">0</span> memories created and counting!
+            </p>
+        </div>
+
+        <div class="memory-game" id="memoryGame"></div>
+    </div>
+
+    <footer>
+        Crafted with eternal love by Sohaib for my soulmate Fatima 💞
+    </footer>
+
+    <script>
+        let memoryCount = 0;
+
+        function createHearts() {
+            const heart = document.createElement('div');
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.top = Math.random() * 100 + '%';
+            heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+            heart.innerHTML = '💖';
+            heart.style.animation = `float ${Math.random() * 3 + 2}s linear`;
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+            memoryCount++;
+            document.getElementById('memoryCounter').textContent = memoryCount;
+        }
+
+        function measureLove() {
+            const phrases = [
+                "Infinite and Beyond!",
+                "Stronger Than the Universe!",
+                "Eternal Like the Stars!",
+                "Unmeasurably Infinite!"
+            ];
+            const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+            alert(`Our Love is:\n${randomPhrase} 💖`);
+            createHearts();
+        }
+
+        // Memory Game Logic
+        const emojis = ['🌸', '🌺', '💮', '🏵️', '🌻', '🌼', '🌷', '🌹'];
+        const gameContainer = document.getElementById('memoryGame');
+        let flippedCards = [];
+        
+        // Create game board
+        emojis.concat(emojis).sort(() => 0.5 - Math.random()).forEach(emoji => {
+            const card = document.createElement('div');
+            card.className = 'memory-card';
+            card.innerHTML = `<span style="opacity:0">${emoji}</span>`;
+            card.onclick = () => flipCard(card, emoji);
+            gameContainer.appendChild(card);
+        });
+
+        function flipCard(card, emoji) {
+            if(flippedCards.length < 2 && !card.classList.contains('flipped')) {
+                card.classList.add('flipped');
+                card.innerHTML = emoji;
+                flippedCards.push({card, emoji});
+                
+                if(flippedCards.length === 2) {
+                    setTimeout(checkMatch, 1000);
+                }
+            }
+        }
+
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+            if(card1.emoji === card2.emoji) {
+                card1.card.style.backgroundColor = 'var(--yellow)';
+                card2.card.style.backgroundColor = 'var(--yellow)';
+            } else {
+                card1.card.classList.remove('flipped');
+                card2.card.classList.remove('flipped');
+                card1.card.innerHTML = `<span style="opacity:0">${card1.emoji}</span>`;
+                card2.card.innerHTML = `<span style="opacity:0">${card2.emoji}</span>`;
+            }
+            flippedCards = [];
+        }
+
+        // Click anywhere to create hearts
+        document.body.addEventListener('click', createHearts);
+
+    </script>
+</body>
+</html>
