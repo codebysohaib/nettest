@@ -21,27 +21,46 @@
         body {
             min-height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
             background: linear-gradient(45deg, var(--background), #34495e);
             color: white;
         }
 
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
+        }
+
         .container {
+            flex: 1;
             text-align: center;
             padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 90%;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            color: #ecf0f1;
         }
 
         .speedometer {
@@ -125,8 +144,11 @@
     </style>
 </head>
 <body>
+    <header>
+        <h1 class="header-title">NetTest</h1>
+    </header>
+
     <div class="container">
-        <h1>NetTest</h1>
         <div class="speedometer">
             <div class="speed-text">0 Mbps</div>
         </div>
@@ -139,6 +161,10 @@
             <button class="share-btn whatsapp" onclick="shareResult('whatsapp')">WhatsApp</button>
         </div>
     </div>
+
+    <footer>
+        <p class="footer-text">Made with ❤️ by Sohaib</p>
+    </footer>
 
     <script>
         async function startTest() {
